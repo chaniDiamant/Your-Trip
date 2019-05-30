@@ -42,5 +42,13 @@ namespace YourTrip.Models
         public DbSet<YourTrip.Models.Destination> Destination { get; set; }
 
         public DbSet<YourTrip.Models.Order> Order { get; set; }
+
+        public DbSet<YourTrip.Models.Plane> Plane { get; set; }
+
+        public DbSet<YourTrip.Models.Seat> Seat { get; set; }
+
+        public DbSet<YourTrip.Models.Terminal> Terminal { get; set; }
+
+        public DbSet<YourTrip.Models.Ticket> Ticket { get; set; }
     }
 }
