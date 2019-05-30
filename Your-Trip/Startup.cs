@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using YourTrip.Models;
 
 namespace Your_Trip
 {
@@ -22,6 +24,9 @@ namespace Your_Trip
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            services.AddDbContext<YourTripContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("YourTripContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
