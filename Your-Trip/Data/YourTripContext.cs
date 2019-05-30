@@ -36,5 +36,11 @@ namespace YourTrip.Models
                 .HasForeignKey(pt => pt.DepartmentName);
 
         }
+
+        public DbSet<YourTrip.Models.Flight> Flight { get; set; }
+
+        public DbSet<YourTrip.Models.Destination> Destination { get; set; }
+
+        public DbSet<YourTrip.Models.Order> Order { get; set; }
     }
 }
